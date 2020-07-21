@@ -1,0 +1,184 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Begin header code ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Main header bar code */
+header {
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+a.header {
+    color: gray;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a.header:hover {
+    text-decoration: underline;
+}
+/* End main header code */
+
+/* Heading left code */
+.headLeft {
+    float: left;
+    padding-left: .5rem;
+}
+/* End heading left code */
+
+/* Heading right code */
+.headRight {
+    float: right;
+    padding-right: .5rem;
+}
+
+.acct {
+    position: relative;
+    width: 20px;
+    height: auto;
+    top: 4px;
+    right: 4px;
+    opacity: .6;
+}
+
+.acct:hover {
+    opacity: 1.0;
+}
+
+.headingSignIn {
+    background-color: #4285F4;
+    color: white;
+    margin: 0;
+}
+/* End heading right code */
+/* End header ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Begin container code ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container {
+    display: grid;
+    justify-content: center;
+}
+/* End container code ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Icons */
+.searchGlass {
+    position: relative;
+    width: 15px;
+    height: auto;
+    top: 2px;
+    left: 20px;
+    opacity: .6;
+}
+
+.mic {
+    position: relative;
+    width: 15px;
+    height: 20px;
+    top: 5px;
+    right: 20px;
+}
+/* End icons */
+
+
+/* Search and buttons ~~~~~~~~~~~~~~ */
+.logo {
+    position: relative;
+    margin: auto;
+    width: auto;
+    height: auto;
+    top: 5rem;
+    left: 3.6rem;
+}
+
+input {
+    border-radius: 20px;
+    height: 40px;
+    margin-left: -14px;
+    margin-right: -14px ;
+    width: 500px;
+    padding-left: 2.5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:hover {
+    box-shadow: 20px;
+}
+
+.searchBox {
+    position: relative;
+    top: 7rem;
+    left: 3rem;
+}
+
+.searchSelectors {
+    position: relative;
+    top: 8.666rem;
+    left: 11rem;
+}
+
+button {
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    line-height: 27px;
+    text-align: center;
+    height: 36px;
+    min-width: 54px;
+}
+
+#devices {
+    position: relative;
+    left: 3.5rem;
+    text-decoration: none;
+    color: blue;
+}
+
+a#devices:hover {
+    text-decoration: underline;
+}
+
+/* End search and buttons ~~~~~~~~~~~~~~ */
+/* Begin footer code ~~~~~~~~~~~~~~~~~ */
+.homePageFooter {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 23rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding-top: 25px;
+    line-height: 14px;
+}
+
+.footerLeft {
+    float: left;
+    padding-left: 1.2rem;
+    display: block;
+    padding-bottom: 20px;
+}
+
+a.homePageFooter {
+    text-decoration: none;
+}
+
+.footerRight {
+    float: right;
+    padding-right: 1.2rem;
+    display: block;
+    padding-bottom: 20px;
+}
+
+
+/* End footer code ~~~~~~~~~~~~~~~~~~~~ */
