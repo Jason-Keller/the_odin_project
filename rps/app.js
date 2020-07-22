@@ -6,8 +6,8 @@ let computerScore = 0;
 
 // This is where the game is played
 function playRound(playerSelection, computerSelection) {
-    let playerSelection = playerPlay();
-    let computerSelection = computerPlay();
+    playerSelection = playerPlay();
+    computerSelection = computerPlay();
     if (playerSelection === computerSelection) { 
         return "Tie!"
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
@@ -42,16 +42,25 @@ function computerPlay() {
 
 // This will prompt the user to make a selection.
 function playerPlay() { 
-    let choices = ["Rock", "Paper", "Scissors"];
+    const choices = ["Rock", "Paper", "Scissors"];
     let playerSelection = prompt("Choose either \"Rock\", \"Paper\", or \"Scissors\"." + "Inputs are not case-sensitive");
-    if (choices.includes(playerSelection.toLowerCase())) {
-        console.log("You've selected ${playerSelection}.");
-        return playerSelection;
-    } else {
-        console.log("This isn't a choice. Choose either \"Rock\", \"Paper\", or \"Scissors\".");
-        return false;
+    if (choices.includes(playerSelection)) {
+        console.log("This is working corectly");
     }
 }
+
+
+
+
+
+
+    // if (choices.includes(playerSelection.toLowerCase())) {
+    //     console.log("You've selected ${playerSelection}.");
+    //     return playerSelection;
+    // } else {
+    //     console.log("This isn't a choice. Choose either \"Rock\", \"Paper\", or \"Scissors\".");
+    //     return false;
+    // }
 
 btn.addEventListener("click", function(){
     console.log("functionality is coming soon.");
