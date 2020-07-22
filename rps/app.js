@@ -10,27 +10,16 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay();
     if (playerSelection === computerSelection) { 
         return "Tie!"
-    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        computerScore++;
-        return "You lose";
-    }  else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        computerScore++;
-        return "You lose";
-    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        computerScore++;
-        return "You lose";
-    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+    } else if ((playerSelection === "Rock" && computerSelection === "Scissors") ||
+    (playerSelection === "Scissors" && computerSelection === "Paper") ||
+    (playerSelection === "Paper" && computer === "Rock")) {
         playerScore++;
-        return "You win";
-    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        playerScore++;
-        return "You win";
-    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        playerSelection ++;
-        return "You win";
-    } 
+        return "Good job, ${playerSelection} beats ${computerSelection}";
+    } else {
+        computerScore++;
+        return "${computerSelection} beats ${playerSelection}";
+    }
 }
-
 
 // Functions ===================================================
 // This will return what the computer chooses at random
@@ -44,8 +33,12 @@ function computerPlay() {
 function playerPlay() { 
     const choices = ["Rock", "Paper", "Scissors"];
     let playerSelection = prompt("Choose either \"Rock\", \"Paper\", or \"Scissors\"." + "Inputs are not case-sensitive");
-    if (choices.includes(playerSelection)) {
-        console.log("This is working corectly");
+    if (choices.includes(playerSelection.toLowerCase())) {
+        console.log("This is working corectly. You chose ${upperFirst(playerSelection)}");
+        return playerSelection;
+    } else {
+        console.log("Please select a valid choice");
+        return false;
     }
 }
 
