@@ -21,6 +21,7 @@ rock.addEventListener("click", function(){
     playerSelection = "rock";
     computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
+    console.log("You played " + playerSelection + " computer played " + computerSelection);
     return "rock";
 });
 
@@ -28,6 +29,7 @@ paper.addEventListener("click", function(){
     playerSelection = "paper";
     computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
+    console.log("You played " + playerSelection + " computer played " + computerSelection);
     return "paper";
 });
 
@@ -35,6 +37,7 @@ scissors.addEventListener("click", function(){
     playerSelection = "scissors";
     computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
+    console.log("You played " + playerSelection + " computer played " + computerSelection);
     return "scissors";
 });
 // Selectors ===============
@@ -66,9 +69,6 @@ const saveScore = () => {
     document.getElementsByClassName("score-you").textContent = playerScore;
     document.getElementsByClassName("score-them").textContent = computerScore;
 }
-
-
-
 
 // Computer selections ======
 function computerPlay() {
