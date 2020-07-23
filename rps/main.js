@@ -41,23 +41,31 @@ scissors.addEventListener("click", function(){
 
 // Game function ======
 function playRound(playerSelection, computerSelection) {
-    playerSelection();
-    computerSelection();
+    if ((playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    ( playerSelection === "scissors" && computerSelection === "paper")) {
+        playerScore++
+        if (playerScore === 5) {
+            alert("You win!");
+        } else if ((playerSelection === "scissors" && computerSelection == "rock") || 
+        (playerSelection === "rock" && computerSelection === "paper") ||
+        (playerSelection === "paper" && computerSelection === "sciossrs")) {
+            computerScore++;
+            if (computerScore === 5) {
+                alert("You lose!");
+            }
+    }
+    saveScore()
+}
 }
 // Game function ======
 
 
-// This is used to apply the correct CSS to the elements
-function playerSelection() {
-    if (playerSelection === "rock") {
-        
-    }
+// Update the scoreboards
+const saveScore = () => {
+    document.getElementsByClassName("score-you").textContent = playerScore;
+    document.getElementsByClassName("score-them").textContent = computerScore;
 }
-
-
-
-
-
 
 
 
