@@ -76,7 +76,6 @@ h1 {
 
 #rock {
     left: 35rem;
-    position: absolute;
     width: 120px;
     padding: 1rem 3rem 3rem 3rem;
 }
@@ -84,7 +83,6 @@ h1 {
 #paper {
     left: 48.7rem;
     right: -10rem;
-    position: absolute;
     width: 120px;
     padding: 1rem 3rem 3rem 3rem;
 }
@@ -92,7 +90,6 @@ h1 {
 #scissors {
     right: 35rem;
     bottom: 2.4rem;
-    position: absolute;
     width: 155px;
     padding: 1rem 3rem 3rem 3rem;
 }
