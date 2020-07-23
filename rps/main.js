@@ -9,7 +9,7 @@ winningScore = 5;
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
-const selections = document.getElementById('selections');
+const selections = document.getElementById('menu');
 const playerChoice = document.getElementById('playerchoice');
 const computerChoice = document.getElementById('computerchoice');
 // Dom elements ======
@@ -19,21 +19,21 @@ const computerChoice = document.getElementById('computerchoice');
 // these will allow the player variable to be updated and for the player to make a selection that doesn't involve the use of a prompt
 rock.addEventListener("click", function(){
     playerSelection = "rock";
-    computerPlay();
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     return "rock";
 });
 
 paper.addEventListener("click", function(){
     playerSelection = "paper";
-    computerPlay();
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     return "paper";
 });
 
-paper.addEventListener("click", function(){
+scissors.addEventListener("click", function(){
     playerSelection = "scissors";
-    computerPlay();
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     return "scissors";
 });
@@ -41,18 +41,18 @@ paper.addEventListener("click", function(){
 
 // Game function ======
 function playRound(playerSelection, computerSelection) {
-    player = playerSelection();
-    computer = computerPlay();
-    if(player === computer) {
-        return "Tie!"
-    }
+    playerSelection();
+    computerSelection();
 }
 // Game function ======
 
 
-
-
-
+// This is used to apply the correct CSS to the elements
+function playerSelection() {
+    if (playerSelection === "rock") {
+        
+    }
+}
 
 
 
@@ -65,7 +65,7 @@ function playRound(playerSelection, computerSelection) {
 // Computer selections ======
 function computerPlay() {
     let choices = ["rock", "paper", "scissors"];
-    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    return computerChoice;
+    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
+    return computerSelection;
 }
 // Computer selection ======

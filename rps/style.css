@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: mediumaquamarine;
+    background-color: #6BB4F8;
     color: whitesmoke;
     padding: 0;
 }
@@ -12,9 +12,9 @@ body {
     display: grid;
     place-items: center;
 }
-#header-para {
-    font-size: 1rem;
-    padding-bottom: 20px;
+.header-para {
+    font-size: 1.1rem;
+    padding-bottom: .3rem;
 }
 
 a {
@@ -30,6 +30,7 @@ h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 3px  #74a790;
     text-align: center;
+    margin: auto;
 }
 /* Header contnet */
 
@@ -42,10 +43,11 @@ h1 {
 }
 
 .score-box {
-    border: 3px solid white;
+    border: 8px solid white;
     border-radius: 4px;
     width: 20rem;
-    height: 10rem;
+    height: 15rem;
+    background-color: rgb(235, 186, 51);
 }
 
 .you {
@@ -66,7 +68,57 @@ h1 {
 /* Score and scorebox */
 
 .menu {
-    display: grid;
-    grid-template-columns: 3 100px;
-    align-items: center;
+    text-align: center;
+    padding: 2rem 4rem 4rem 2rem;
+    box-sizing: border-box;
+    height: 25rem;
+}
+
+#rock {
+    left: 35rem;
+    position: absolute;
+    width: 120px;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+#paper {
+    left: 48.7rem;
+    right: -10rem;
+    position: absolute;
+    width: 120px;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+#scissors {
+    right: 35rem;
+    bottom: 2.4rem;
+    position: absolute;
+    width: 155px;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+img:active{
+    color: white;
+}
+
+footer {
+    margin: auto;
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.footer-para {
+    display: inline;
+}
+
+.para-left {
+    float: left;
+    padding-left: 50px;
+}
+
+.para-right {
+    float: right;
+    padding-right: 50px;
 }
