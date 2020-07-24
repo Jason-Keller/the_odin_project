@@ -109,7 +109,7 @@ h1 {
     padding: 1rem 3rem 3rem 3rem;
     position: relative;
     top: 30px;
-    left: -2.4rem;
+    left: -0.4rem;
 }
 
 img:active{
@@ -125,18 +125,18 @@ footer {
 .footer-para {
     display: inline; 
     font-size: 1.3rem;
+    padding-bottom: 20px;
+    top: 27rem;
 }
 
 .para-left {
     float: left;
     padding-left: 50px;
     position: relative;
-    top: 27rem;
 }
 
 .para-right {
     float: right;
     padding-right: 50px;
     position: relative;
-    top: 27rem;
 }
