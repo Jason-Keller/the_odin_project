@@ -9,9 +9,9 @@ winningScore = 5;
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
-const selections = document.getElementById('menu');
-const playerChoice = document.getElementById('playerchoice');
-const computerChoice = document.getElementById('computerchoice');
+let scoreYou = document.getElementsByClassName("score-you");
+let scoreThem = document.getElementsByClassName("score-them");
+
 // Dom elements ======
 // TOP-LEVEL VARIABLES ======================================================
 
@@ -58,16 +58,16 @@ function playRound(playerSelection, computerSelection) {
                 alert("You lose!");
             }
     }
-    saveScore()
 }
+saveScore();
 }
 // Game function ======
 
 
 // Update the scoreboards
-const saveScore = () => {
-    document.getElementsByClassName("score-you").textContent = playerScore;
-    document.getElementsByClassName("score-them").textContent = computerScore;
+function saveScore() {
+    scoreYou.textContent = playerScore;
+    scoreThem.textContent = computerScore;
 }
 
 // Computer selections ======
